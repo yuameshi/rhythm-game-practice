@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CLICK ICONS!!</title>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="./favicon.png">
+	<meta name="viewport"
+		content="initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, width=device-width,target-densitydpi=device-dpi" />
+	<script type="text/javascript" src="./createjs.decrypted.js"></script>
+	<script type="text/javascript">
+		var isDesktop = navigator['userAgent'].match(/(ipad|iphone|ipod|android|windows phone)/i) ? false : true;
+		var fontunit = isDesktop ? 20 : ((window.innerWidth > window.innerHeight ? window.innerHeight : window.innerWidth) / 320) * 10;
+		document.write('<style type="text/css">' +
+			'html,body {font-size:' + (fontunit < 30 ? fontunit : '30') + 'px;}' +
+			(isDesktop ? '#welcome,#GameTimeLayer,#GameLayerBG,#GameScoreLayer.SHADE{position: absolute;}' :
+				'#welcome,#GameTimeLayer,#GameLayerBG,#GameScoreLayer.SHADE{position:fixed;}@media screen and (orientation:landscape) {#landscape {display: box; display: -webkit-box; display: -moz-box; display: -ms-flexbox;}}') +
+			'</style>');
+	</script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body onLoad="init()">
+	<script src="./index.js"></script>
+	<div id="GameScoreLayer" class="BBOX SHADE bgc1" style="display:none;">
+		<div style="padding:0 5%;">
+			<div id="GameScoreLayer-text"></div>
+			<div id="GameScoreLayer-score" style="margin:10px 0;">Score</div>
+			<div id="GameScoreLayer-bast">Best Record</div>
+			<div id="GameScoreLayer-btn" class="BOX" style="margin-top:10px;">
+				<div class="btn BOX-S" onClick="replayBtn()">Restart</div>&nbsp;
+			</div>
+			<div class="pageContent" id="dd2" style="margin-top:10px;"></div>
+		</div>
+	</div>
+	<div id="welcome" class="SHADE BOX-M">
+		<div class="welcome-bg FILL"></div>
+		<div class="FILL BOX-M" style="position:absolute;top:0;left:0;right:0;bottom:0;z-index:5;">
+			<div style="margin:0 8% 0 9%;">
+				<div style="font-size:2.6em; color:#FEF002;">Click!</div><br />
+				<div style="font-size:1.8em; color:#fff; line-height:1.5em;">From the bottom icon first<br />See how
+					many icons you can click in 20 seconds!<br />
+				</div><br />
+				<div id="ready-btn" class="btn loading"
+					style="display:inline-block; margin:0 auto; width:8em; height:1.7em; line-height:1.7em; font-size:2.2em; color:#fff;">
+				</div>
+				<div id="dd1" style="margin: 10px 0 0 0;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="landscape" class="SHADE BOX-M" style="background:rgba(0,0,0,.9);">
+		<div class="welcome-bg FILL"></div>
+		<div id="landscape-text" style="color:#fff;font-size:3em;">Turn your screen to PORTRAIT</div>
+	</div>
+	<script type="text/javascript">
+		if (isDesktop)
+			document.write('</div>');
+	</script>
+	<!-- <script>
+		(function () {
+			var s = "_" + Math.random().toString(36).slice(2);
+			document.write('<div id="' + s + '"></div>');
+			(window.slotbydup = window.slotbydup || []).push({
+				id: '2414325',
+				container: s,
+				size: '0,0',
+				display: 'inlay-fix'
+			});
+		})();
+	</script> -->
+</body>
+
+</html>
