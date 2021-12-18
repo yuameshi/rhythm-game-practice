@@ -1,7 +1,7 @@
 # What's this?
 This is a rhythm game practic tool , it's a rebuild of [This](http://game.hg0355.com/game/xpg/index.html).
 
-You can access this rebuild copied at [Here]().
+You can access this rebuild copied at [Here](https://www.han-han.xyz/rhythm-game-practice/).
 
 # Some Q&A
 
